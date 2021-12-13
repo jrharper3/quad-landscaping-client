@@ -796,8 +796,8 @@ function saveAccountChanges(){
     let saveAccChanges = document.getElementById("saveAccountChanges");
     saveAccChanges.style.opacity = 0;
 
-    console.log(document.getElementById("newPic").value);
-    if (document.getElementById("newPic").value=="") console.log("Here");
+    var pfp = "0";
+    if (document.getElementById("newPic").value != "") pfp = console.log(document.getElementById("newPic").value);
 
     var account = {
             AccountId : parseInt(sessionStorage.getItem("accId")),
