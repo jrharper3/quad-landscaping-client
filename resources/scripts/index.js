@@ -796,7 +796,7 @@ function saveAccountChanges(){
     let saveAccChanges = document.getElementById("saveAccountChanges");
     saveAccChanges.style.opacity = 0;
 
-    console.log(document.getElementById("newPic").innerText);
+    console.log(document.getElementById("newPic").value);
 
     var account = {
             AccountId : parseInt(sessionStorage.getItem("accId")),
@@ -832,7 +832,6 @@ function saveAccountChanges(){
 }
 
 function accountPageLoad(json){
-    console.log(sessionStorage.getItem("accId"))
     
         json.forEach(account => {
             if(account.accountId == sessionStorage.getItem("accId")){ 
