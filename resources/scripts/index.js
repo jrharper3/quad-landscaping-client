@@ -807,7 +807,7 @@ function saveAccountChanges(){
             AccountPassword : "0",
             AccountAdminStatus : parseInt(sessionStorage.getItem("accAdmStatus")),
             AccountBio : document.getElementById("bio").innerText,
-            AccountProfilePic : document.getElementById("newPic").value,
+            AccountProfilePic : pfp,
             AccountCreatedSessionId : 0
     }
 
