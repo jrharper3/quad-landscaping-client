@@ -41,6 +41,7 @@ function forumLoad(){
     })
     
     if (sessionStorage.getElementById("loginStatus")=="y") {
+        console.log(sessionStorage.getElementById("loginStatus"));
         var newPostDiv = document.getElementById("newForumPostButton");
         newPostDiv.innerHTML += `<a href="newForumPost.html" class="btn btn-primary active" role="button" aria-pressed="true">Make A New Post</a>`;
     }
