@@ -847,13 +847,10 @@ function accountPageLoad(json){
                     <h2 style="display: inline;" id="lname"> ${account.accountLName}</h2>
                     <h3 >Bio : </h3>
                     <h3 id="bio">${account.accountBio}</h3>            
-                </div>`
-
-                if (sessionStorage.getItem("loginStatus")=="y") html += `
+                </div>
                 <div class="form-group row justify-content-center" id="editPic">
-                </div>`
-
-                html += `<div class="form-group row justify-content-center" id="signIn">
+                </div>
+                <div class="form-group row justify-content-center" id="signIn">
                     <div class="col-6">
                     <label for="password">Current Password</label>
                     <input type="password" class="form-control" id="currentPassword" placeholder="Password">
