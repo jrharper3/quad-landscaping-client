@@ -830,6 +830,7 @@ function saveAccountChanges(){
     document.getElementById("bio").contentEditable = false;
     document.getElementById("editPic").innerHTML = "";
 
+    alert("Successfully changed!");
 }
 
 function accountPageLoad(json){
