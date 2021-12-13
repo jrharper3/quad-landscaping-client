@@ -780,6 +780,11 @@ function editaccountPage(){
     else{
         saveAccChanges.style.opacity = 0;}
 
+    document.getElementById("editPic").innerHTML += `<div class="col-6">
+    <label for="password">Upload new profile pic</label>
+    <input type="form-control" class="form-control" id="newPic" placeholder="URL">
+    </div>`
+
     document.getElementById("profPic").contentEditable = true;
     document.getElementById("username").contentEditable = true;
     document.getElementById("fname").contentEditable = true;
@@ -820,6 +825,7 @@ function saveAccountChanges(){
     document.getElementById("fname").contentEditable = false;
     document.getElementById("lname").contentEditable = false;
     document.getElementById("bio").contentEditable = false;
+    document.getElementById("editPic").innerHTML = "";
 
 }
 
@@ -841,8 +847,13 @@ function accountPageLoad(json){
                     <h2 style="display: inline;" id="lname"> ${account.accountLName}</h2>
                     <h3 >Bio : </h3>
                     <h3 id="bio">${account.accountBio}</h3>            
-                </div>
-                <div class="form-group row justify-content-center" id="signIn">
+                </div>`
+
+                if (sessionStorage.getItem("loginStatus")=="y") html += `
+                <div class="form-group row justify-content-center" id="editPic">
+                </div>`
+
+                html += `<div class="form-group row justify-content-center" id="signIn">
                     <div class="col-6">
                     <label for="password">Current Password</label>
                     <input type="password" class="form-control" id="currentPassword" placeholder="Password">
